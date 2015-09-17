@@ -27,9 +27,13 @@
 		364AA31018C55EBD00EC2140 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364AA2EF18C55EBD00EC2140 /* Foundation.framework */; };
 		364AA31118C55EBD00EC2140 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364AA2F318C55EBD00EC2140 /* UIKit.framework */; };
 		364AA31918C55EBD00EC2140 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 364AA31718C55EBD00EC2140 /* InfoPlist.strings */; };
-		364AA31B18C55EBD00EC2140 /* PassbooksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AA31A18C55EBD00EC2140 /* PassbooksTests.m */; };
-		364AA32718C55F8100EC2140 /* PassbookLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AA32618C55F8100EC2140 /* PassbookLayout.m */; };
+		364AA31B18C55EBD00EC2140 /* PassbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AA31A18C55EBD00EC2140 /* PassbookTests.m */; };
 		364AA32B18C5606600EC2140 /* PassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AA32A18C5606600EC2140 /* PassCell.m */; };
+		8384F4F41BAAAC68006728B2 /* PassbookLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8384F4ED1BAAAC68006728B2 /* PassbookLayout.framework */; };
+		8384F4F51BAAAC68006728B2 /* PassbookLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8384F4ED1BAAAC68006728B2 /* PassbookLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8384F4FA1BAAAC99006728B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364AA2F318C55EBD00EC2140 /* UIKit.framework */; };
+		8384F4FB1BAAAC9A006728B2 /* PassbookLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 364AA32618C55F8100EC2140 /* PassbookLayout.m */; };
+		8384F4FC1BAAAC9F006728B2 /* PassbookLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 364AA32518C55F8100EC2140 /* PassbookLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,28 @@
 			remoteGlobalIDString = 364AA2EB18C55EBD00EC2140;
 			remoteInfo = Passbooks;
 		};
+		8384F4F21BAAAC68006728B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364AA2E418C55EBD00EC2140 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8384F4EC1BAAAC68006728B2;
+			remoteInfo = PassbookLayout;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8384F4F91BAAAC68006728B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8384F4F51BAAAC68006728B2 /* PassbookLayout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3629217618C72E8500161E43 /* pass-mockup-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pass-mockup-blue.png"; sourceTree = "<group>"; };
@@ -50,7 +75,7 @@
 		3629217A18C72E8500161E43 /* pass-mockup-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pass-mockup-red.png"; sourceTree = "<group>"; };
 		3629217B18C72E8500161E43 /* pass-mockup-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pass-mockup-red@2x.png"; sourceTree = "<group>"; };
 		3629218218C72E9800161E43 /* PassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassCell.xib; sourceTree = "<group>"; };
-		364AA2EC18C55EBD00EC2140 /* Passbooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passbooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		364AA2EC18C55EBD00EC2140 /* PassbookLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassbookLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364AA2EF18C55EBD00EC2140 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		364AA2F118C55EBD00EC2140 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		364AA2F318C55EBD00EC2140 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -64,15 +89,17 @@
 		364AA30418C55EBD00EC2140 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		364AA30518C55EBD00EC2140 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		364AA30718C55EBD00EC2140 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		364AA30D18C55EBD00EC2140 /* PassbooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassbooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364AA30D18C55EBD00EC2140 /* PassbookLayout.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassbookLayout.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364AA30E18C55EBD00EC2140 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		364AA31618C55EBD00EC2140 /* PassbooksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassbooksTests-Info.plist"; sourceTree = "<group>"; };
+		364AA31618C55EBD00EC2140 /* PassbookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassbookTests-Info.plist"; sourceTree = "<group>"; };
 		364AA31818C55EBD00EC2140 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		364AA31A18C55EBD00EC2140 /* PassbooksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbooksTests.m; sourceTree = "<group>"; };
-		364AA32518C55F8100EC2140 /* PassbookLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PassbookLayout.h; path = ../../PassbookLayout/PassbookLayout.h; sourceTree = "<group>"; };
-		364AA32618C55F8100EC2140 /* PassbookLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PassbookLayout.m; path = ../../PassbookLayout/PassbookLayout.m; sourceTree = "<group>"; };
+		364AA31A18C55EBD00EC2140 /* PassbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbookTests.m; sourceTree = "<group>"; };
+		364AA32518C55F8100EC2140 /* PassbookLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassbookLayout.h; sourceTree = "<group>"; };
+		364AA32618C55F8100EC2140 /* PassbookLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassbookLayout.m; sourceTree = "<group>"; };
 		364AA32918C5606600EC2140 /* PassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassCell.h; sourceTree = "<group>"; };
 		364AA32A18C5606600EC2140 /* PassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCell.m; sourceTree = "<group>"; };
+		8384F4ED1BAAAC68006728B2 /* PassbookLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PassbookLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8384F5121BAAACD5006728B2 /* PassbookLayout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PassbookLayout-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8384F4F41BAAAC68006728B2 /* PassbookLayout.framework in Frameworks */,
 				364AA2F218C55EBD00EC2140 /* CoreGraphics.framework in Frameworks */,
 				364AA2F418C55EBD00EC2140 /* UIKit.framework in Frameworks */,
 				364AA2F018C55EBD00EC2140 /* Foundation.framework in Frameworks */,
@@ -96,6 +124,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8384F4E91BAAAC68006728B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8384F4FA1BAAAC99006728B2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,26 +145,28 @@
 				3629217A18C72E8500161E43 /* pass-mockup-red.png */,
 				3629217B18C72E8500161E43 /* pass-mockup-red@2x.png */,
 			);
-			path = Resources;
+			name = Resources;
+			path = Example/Resources;
 			sourceTree = "<group>";
 		};
 		364AA2E318C55EBD00EC2140 = {
 			isa = PBXGroup;
 			children = (
 				364AA32418C55F6B00EC2140 /* Layout */,
-				364AA2F518C55EBD00EC2140 /* Passbooks */,
-				364AA31418C55EBD00EC2140 /* PassbooksTests */,
+				364AA2F518C55EBD00EC2140 /* Passbook */,
+				364AA31418C55EBD00EC2140 /* PassbookTest */,
+				3629217518C72E8500161E43 /* Resources */,
 				364AA2EE18C55EBD00EC2140 /* Frameworks */,
 				364AA2ED18C55EBD00EC2140 /* Products */,
-				3629217518C72E8500161E43 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
 		364AA2ED18C55EBD00EC2140 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				364AA2EC18C55EBD00EC2140 /* Passbooks.app */,
-				364AA30D18C55EBD00EC2140 /* PassbooksTests.xctest */,
+				364AA2EC18C55EBD00EC2140 /* PassbookLayout.app */,
+				364AA30D18C55EBD00EC2140 /* PassbookLayout.xctest */,
+				8384F4ED1BAAAC68006728B2 /* PassbookLayout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +182,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		364AA2F518C55EBD00EC2140 /* Passbooks */ = {
+		364AA2F518C55EBD00EC2140 /* Passbook */ = {
 			isa = PBXGroup;
 			children = (
 				364AA2FE18C55EBD00EC2140 /* AppDelegate.h */,
@@ -158,7 +196,8 @@
 				364AA30718C55EBD00EC2140 /* Images.xcassets */,
 				364AA2F618C55EBD00EC2140 /* Supporting Files */,
 			);
-			path = Passbooks;
+			name = Passbook;
+			path = Example/Passbook;
 			sourceTree = "<group>";
 		};
 		364AA2F618C55EBD00EC2140 /* Supporting Files */ = {
@@ -172,19 +211,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		364AA31418C55EBD00EC2140 /* PassbooksTests */ = {
+		364AA31418C55EBD00EC2140 /* PassbookTest */ = {
 			isa = PBXGroup;
 			children = (
-				364AA31A18C55EBD00EC2140 /* PassbooksTests.m */,
+				364AA31A18C55EBD00EC2140 /* PassbookTests.m */,
 				364AA31518C55EBD00EC2140 /* Supporting Files */,
 			);
-			path = PassbooksTests;
+			name = PassbookTest;
+			path = Example/PassbookTests;
 			sourceTree = "<group>";
 		};
 		364AA31518C55EBD00EC2140 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				364AA31618C55EBD00EC2140 /* PassbooksTests-Info.plist */,
+				364AA31618C55EBD00EC2140 /* PassbookTests-Info.plist */,
 				364AA31718C55EBD00EC2140 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -193,6 +233,7 @@
 		364AA32418C55F6B00EC2140 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				8384F5121BAAACD5006728B2 /* PassbookLayout-Info.plist */,
 				364AA32518C55F8100EC2140 /* PassbookLayout.h */,
 				364AA32618C55F8100EC2140 /* PassbookLayout.m */,
 			);
@@ -201,27 +242,40 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8384F4EA1BAAAC68006728B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8384F4FC1BAAAC9F006728B2 /* PassbookLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		364AA2EB18C55EBD00EC2140 /* Passbooks */ = {
+		364AA2EB18C55EBD00EC2140 /* Passbook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 364AA31E18C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "Passbooks" */;
+			buildConfigurationList = 364AA31E18C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "Passbook" */;
 			buildPhases = (
 				364AA2E818C55EBD00EC2140 /* Sources */,
 				364AA2E918C55EBD00EC2140 /* Frameworks */,
 				364AA2EA18C55EBD00EC2140 /* Resources */,
+				8384F4F91BAAAC68006728B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8384F4F31BAAAC68006728B2 /* PBXTargetDependency */,
 			);
-			name = Passbooks;
+			name = Passbook;
 			productName = Passbooks;
-			productReference = 364AA2EC18C55EBD00EC2140 /* Passbooks.app */;
+			productReference = 364AA2EC18C55EBD00EC2140 /* PassbookLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		364AA30C18C55EBD00EC2140 /* PassbooksTests */ = {
+		364AA30C18C55EBD00EC2140 /* PassbookTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 364AA32118C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "PassbooksTests" */;
+			buildConfigurationList = 364AA32118C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "PassbookTests" */;
 			buildPhases = (
 				364AA30918C55EBD00EC2140 /* Sources */,
 				364AA30A18C55EBD00EC2140 /* Frameworks */,
@@ -232,10 +286,28 @@
 			dependencies = (
 				364AA31318C55EBD00EC2140 /* PBXTargetDependency */,
 			);
-			name = PassbooksTests;
+			name = PassbookTests;
 			productName = PassbooksTests;
-			productReference = 364AA30D18C55EBD00EC2140 /* PassbooksTests.xctest */;
+			productReference = 364AA30D18C55EBD00EC2140 /* PassbookLayout.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8384F4EC1BAAAC68006728B2 /* PassbookLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8384F4F61BAAAC68006728B2 /* Build configuration list for PBXNativeTarget "PassbookLayout" */;
+			buildPhases = (
+				8384F4E81BAAAC68006728B2 /* Sources */,
+				8384F4E91BAAAC68006728B2 /* Frameworks */,
+				8384F4EA1BAAAC68006728B2 /* Headers */,
+				8384F4EB1BAAAC68006728B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PassbookLayout;
+			productName = PassbookLayout;
+			productReference = 8384F4ED1BAAAC68006728B2 /* PassbookLayout.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -249,9 +321,12 @@
 					364AA30C18C55EBD00EC2140 = {
 						TestTargetID = 364AA2EB18C55EBD00EC2140;
 					};
+					8384F4EC1BAAAC68006728B2 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 				};
 			};
-			buildConfigurationList = 364AA2E718C55EBD00EC2140 /* Build configuration list for PBXProject "Passbooks" */;
+			buildConfigurationList = 364AA2E718C55EBD00EC2140 /* Build configuration list for PBXProject "PassbookLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -264,8 +339,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				364AA2EB18C55EBD00EC2140 /* Passbooks */,
-				364AA30C18C55EBD00EC2140 /* PassbooksTests */,
+				364AA2EB18C55EBD00EC2140 /* Passbook */,
+				364AA30C18C55EBD00EC2140 /* PassbookTests */,
+				8384F4EC1BAAAC68006728B2 /* PassbookLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +372,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8384F4EB1BAAAC68006728B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,7 +390,6 @@
 				364AA30018C55EBD00EC2140 /* AppDelegate.m in Sources */,
 				364AA2FC18C55EBD00EC2140 /* main.m in Sources */,
 				364AA32B18C5606600EC2140 /* PassCell.m in Sources */,
-				364AA32718C55F8100EC2140 /* PassbookLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +397,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364AA31B18C55EBD00EC2140 /* PassbooksTests.m in Sources */,
+				364AA31B18C55EBD00EC2140 /* PassbookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8384F4E81BAAAC68006728B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8384F4FB1BAAAC9A006728B2 /* PassbookLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +414,13 @@
 /* Begin PBXTargetDependency section */
 		364AA31318C55EBD00EC2140 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 364AA2EB18C55EBD00EC2140 /* Passbooks */;
+			target = 364AA2EB18C55EBD00EC2140 /* Passbook */;
 			targetProxy = 364AA31218C55EBD00EC2140 /* PBXContainerItemProxy */;
+		};
+		8384F4F31BAAAC68006728B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8384F4EC1BAAAC68006728B2 /* PassbookLayout */;
+			targetProxy = 8384F4F21BAAAC68006728B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -421,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -433,10 +528,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passbooks/Passbooks-Prefix.pch";
-				INFOPLIST_FILE = "Passbooks/Passbooks-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Example/Passbook/Passbook-Prefix.pch";
+				INFOPLIST_FILE = "Example/Passbook/Passbook-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.can.Passbook;
+				PRODUCT_NAME = PassbookLayout;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,10 +543,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passbooks/Passbooks-Prefix.pch";
-				INFOPLIST_FILE = "Passbooks/Passbooks-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Example/Passbook/Passbook-Prefix.pch";
+				INFOPLIST_FILE = "Example/Passbook/Passbook-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.can.Passbook;
+				PRODUCT_NAME = PassbookLayout;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -458,21 +555,21 @@
 		364AA32218C55EBD00EC2140 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passbooks.app/Passbooks";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passbooks/Passbooks-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/Passbook/Passbook-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PassbooksTests/PassbooksTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PRODUCT_NAME = PassbookLayout;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PassbookLayout.app/PassbookLayout";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -480,25 +577,79 @@
 		364AA32318C55EBD00EC2140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passbooks.app/Passbooks";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passbooks/Passbooks-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/Passbook/Passbook-Prefix.pch";
 				INFOPLIST_FILE = "PassbooksTests/PassbooksTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PRODUCT_NAME = PassbookLayout;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PassbookLayout.app/PassbookLayout";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		8384F4F71BAAAC68006728B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "PassbookLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = im.can.PassbookLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8384F4F81BAAAC68006728B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "PassbookLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = im.can.PassbookLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		364AA2E718C55EBD00EC2140 /* Build configuration list for PBXProject "Passbooks" */ = {
+		364AA2E718C55EBD00EC2140 /* Build configuration list for PBXProject "PassbookLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				364AA31C18C55EBD00EC2140 /* Debug */,
@@ -507,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		364AA31E18C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "Passbooks" */ = {
+		364AA31E18C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "Passbook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				364AA31F18C55EBD00EC2140 /* Debug */,
@@ -516,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		364AA32118C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "PassbooksTests" */ = {
+		364AA32118C55EBD00EC2140 /* Build configuration list for PBXNativeTarget "PassbookTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				364AA32218C55EBD00EC2140 /* Debug */,
@@ -524,6 +675,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8384F4F61BAAAC68006728B2 /* Build configuration list for PBXNativeTarget "PassbookLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8384F4F71BAAAC68006728B2 /* Debug */,
+				8384F4F81BAAAC68006728B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

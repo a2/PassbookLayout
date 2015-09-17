@@ -17,18 +17,11 @@
 
 @implementation ViewController
 
-#pragma mark - View Lifecycle
+#pragma mark - View Life Cycle
 
 - (void)viewDidLoad
 {
     [self.collectionView registerNib:[UINib nibWithNibName:@"PassCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"pass"];
-}
-
-#pragma mark (Dis)Appear
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 #pragma mark - UICollectionViewDatasource
@@ -75,24 +68,13 @@
     [collectionView setScrollEnabled:NO];
 }
 
-#pragma mark - UIScrollView delegate
-
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    [[(UICollectionView*)scrollView collectionViewLayout] invalidateLayout];
-//}
-
 #pragma mark - Miscellaneous
 
 #pragma mark Status Bar color
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
-}
-
-- (BOOL)shouldAutomaticallyForwardAppearanceMethods
-{
-    return YES;
 }
 
 @end

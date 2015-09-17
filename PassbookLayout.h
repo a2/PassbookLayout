@@ -8,32 +8,37 @@
 
 #import <UIKit/UIKit.h>
 
-struct PassMetrics
-{
+//! Project version number for PassbookLayout.
+FOUNDATION_EXPORT double PassbookLayoutVersionNumber;
+
+//! Project version string for PassbookLayout.
+FOUNDATION_EXPORT const unsigned char PassbookLayoutVersionString[];
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef struct PassMetrics {
     /// Size of a state of a pass
     CGSize size;
     
     /// Amount of "pixels" of overlap between this pass and others.
     CGFloat overlap;
-};
+} PassMetrics;
 
-typedef struct
-{
+typedef struct PassbookLayoutMetrics {
     /// Normal is the real size of the pass, the "full screen" display of it.
-    struct PassMetrics normal;
+    PassMetrics normal;
     
     /// Collapsed is when
-    struct PassMetrics collapsed;
+    PassMetrics collapsed;
     
     /// The size of the bottom stack when a pass is selected and all others are stacked at bottom
     CGFloat bottomStackedTotalHeight;
     
     /// The visible size of each cell in the bottom stack
     CGFloat bottomStackedHeight;
-}PassbookLayoutMetrics;
+} PassbookLayoutMetrics;
 
-typedef struct
-{
+typedef struct PassbookLayoutEffects {
     /// How much of the pulling is translated into movement on the top. An inheritance of 0 disables this feature (same as bouncesTop)
     CGFloat inheritance;
     
@@ -43,7 +48,7 @@ typedef struct
     /// Allows the cells get "stuck" on the top, instead of just scrolling outside
     BOOL sticksTop;
     
-}PassbookLayoutEffects;
+} PassbookLayoutEffects;
 
 @interface PassbookLayout : UICollectionViewLayout
 
@@ -51,3 +56,5 @@ typedef struct
 @property (nonatomic,assign) PassbookLayoutEffects effects;
 
 @end
+
+NS_ASSUME_NONNULL_END
