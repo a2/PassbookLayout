@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     [self.collectionView registerNib:[UINib nibWithNibName:@"PassCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"pass"];
 }
 
